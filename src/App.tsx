@@ -1,10 +1,9 @@
-import { useCookies } from "react-cookie";
-import { AuthRoutes, DashboardRoutes } from "./routes";
-import DashboardLayout from "./provider/DashboardLayout";
+import {useCookies} from "react-cookie"
+import { AuthRoute, DashboardRoutes } from "./routes";
 
-function App() {
-  const [cookies] = useCookies(["token"]);
-  return <>{cookies.token ? <DashboardLayout><DashboardRoutes /></DashboardLayout> : <AuthRoutes />}</>;
+const App = () => {
+  const [cookies] = useCookies(['token']);
+  return cookies.token ? <DashboardRoutes/> : <AuthRoute/>
 }
 
-export default App;
+export default App

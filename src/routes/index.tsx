@@ -1,4 +1,4 @@
-import AuthRoutes from "./auth/AuthRoutes";
+import AuthRoute from "./auth/AuthRoute";
 import DashboardRoutes from "./dashboard/DashboardRoutes";
 
-export { AuthRoutes, DashboardRoutes };
+export {AuthRoute, DashboardRoutes}

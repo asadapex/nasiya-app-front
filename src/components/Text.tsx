@@ -1,10 +1,10 @@
-import type { FC } from "react";
+import type { FC } from "react"
+import type { TextType } from "../@types/TextType"
 
-const Text: FC<{ text: string; extraClass?: string }> = ({
-  text,
-  extraClass,
-}) => {
-  return <p className={`text-[16px] font-normal ${extraClass}`}>{text}</p>;
-};
+const Text:FC<TextType> = ({classList, children, onClick}) => {
+  return (
+    <p onClick={onClick} className={`${classList} font-medium text-[16px]`}>{children}</p>
+  )
+}
 
-export default Text;
+export default Text

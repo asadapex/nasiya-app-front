@@ -1,13 +1,13 @@
-import type { FC } from "react";
-import Menu from "../modules/Menu";
+import type { ReactNode } from "react"
+import { Menu } from "../modules"
 
-const DashboardLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
+const DashboardLayout = ({children}:{children:ReactNode}) => {
   return (
-    <>
-      <div>{children}</div>
-      <Menu />
-    </>
+    <div className="h-[100vh] relative">
+      <div className="pb-[55px]">{children}</div>
+      <Menu/>
+    </div>
   )
-};
+}
 
-export default DashboardLayout;
+export default DashboardLayout
